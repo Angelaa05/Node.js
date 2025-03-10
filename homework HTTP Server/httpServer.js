@@ -6,7 +6,6 @@
 // "The current subject being learned"
 // The server should listen on port 3000.
 
-var http = require("http");
 import http from "node:http";
 
 //Create the server
