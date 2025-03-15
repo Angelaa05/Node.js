@@ -1,34 +1,24 @@
-// Initialize a new npm project and create an index.js file.
-// Using the fs module create a new file called homework.txt
-// Inside the file write the following "Homework 02 in Basic Node"
-var fs = require("fs");
+import fs from "fs";
+import path from "path"; 
 
-fs.writeFile("homework.txt", "Homework 02 in Basic Node", function (err) {
-  if (err) throw err;
-  console.log("Saved!");
-});
-
-// Create a path to the file using the path module
-var path = require("path");
-
-const directory = __dirname;
+const directory = path.resolve(); 
 const filename = "homework.txt";
-filePath = path.join(directory, filename);
-console.log("Full path to the file", filename);
+const filePath = path.join(directory, filename);
 
-// Append to the file the following " FINISHED!"
-
-fs.appendFile("homework.txt", "FINISHED!", function (err) {
+fs.writeFile(filePath, "Homework 02 in Basic Node", (err) => {
   if (err) throw err;
-  console.log("Saved!");
-});
+  console.log("File created and written!");
 
-//Read the file contents and print them out in the console.
-
-fs.readFile(filePath, "utf8", (err, data) => {
-  if (err) {
-    console.log("Error reading the file");
-  } else {
-    console.log(data);
-  }
+  fs.appendFile(filePath, " FINISHED!", (err) => {
+    if (err) throw err;
+    console.log("Text appended!");
+    
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) {
+        console.error("Error reading the file");
+      } else {
+        console.log(data);
+      }
+    });
+  });
 });
