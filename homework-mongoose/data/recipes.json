@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic homemade cookies",
+    "ingredients": ["flour", "butter", "sugar", "chocolate chips"],
+    "instructions": ["Mix ingredients", "Make balls", "Bake for 10 minutes"],
+    "cookingTime": 30,
+    "difficulty": "easy",
+    "isVegetarian": true,
+    "category": "dessert"
+  },
+  {
+    "title": "San Sebastian",
+    "description": "Classic homemade cheescake",
+    "ingredients": ["flour", "butter", "sugar", "chocolate sirup"],
+    "instructions": ["Mix ingredients", "Make balls", "Bake for 20 minutes"],
+    "cookingTime": 40,
+    "difficulty": "hard",
+    "isVegetarian": false,
+    "category": "dessert"
+  }
+]

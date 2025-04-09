@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "b56c2425-de37-4053-9922-397153fa0b95",
+		"name": "mongoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059589"
+	},
+	"item": [
+		{
+			"name": "Get all recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recipe by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipe/67f6b3d2feb7ee6788581407",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipe",
+						"67f6b3d2feb7ee6788581407"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create recipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Kolaci\",\r\n    \"description\": \"Classic homemade cookies\",\r\n    \"ingredients\": [\"flour\", \"butter\", \"sugar\", \"chocolate chips\"],\r\n    \"instructions\": [\"Mix ingredients\", \"Make balls\", \"Bake for 10 minutes\"],\r\n    \"cookingTime\": 30,\r\n    \"difficulty\": \"easy\",\r\n    \"isVegetarian\": true,\r\n    \"category\": \"dessert\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Chocolate Chip\",\r\n        \"description\": \"Classic homemade cookies\",\r\n        \"ingredients\": [\r\n            \"flour\",\r\n            \"butter\",\r\n            \"sugar\",\r\n            \"chocolate chips\"\r\n        ],\r\n        \"instructions\": [\r\n            \"Mix ingredients\",\r\n            \"Make balls\",\r\n            \"Bake for 10 minutes\"\r\n        ],\r\n        \"cookingTime\": 30,\r\n        \"difficulty\": \"easy\",\r\n        \"isVegetarian\": true,\r\n        \"category\": \"dessert\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/recipe/67f6b31cfeb7ee6788581404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipe",
+						"67f6b31cfeb7ee6788581404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipe/67f6b31cfeb7ee6788581404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipe",
+						"67f6b31cfeb7ee6788581404"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
